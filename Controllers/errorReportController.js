@@ -17,7 +17,8 @@ module.exports = {
             error: req.body.error,
             location: req.body.location,
             method: req.body.methood,
-            build: req.body.build
+            build: req.body.build,
+            dateCreated: new Date().toLocaleString()
         })
 
         await error.save()
