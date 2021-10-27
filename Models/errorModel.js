@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 const errorSchema = mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
-  dateCreated:  { type: String, default: new Date().toDateString() },
+  dateCreated:  { type: String, default: new Date().toLocaleString() },
   user: String,
   url: String,
   version: String,
