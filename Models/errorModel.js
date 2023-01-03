@@ -3,17 +3,18 @@ const mongoose = require('mongoose')
 const errorSchema = mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
   dateCreated:  { type: String, default: new Date().toLocaleString() },
-  user: String,
+  userId: String,
   url: String,
   version: String,
-  status: String,
-  device: String,
-  details: String,
+  isFatal: String,
+  errorType: String,
+  build: String,
   payload: String,
-  error: String, 
-  location: String,
-  build: String, 
-  method: String
+  method: String,
+  functionName: String,
+  cause: String,
+  platform: String,
+  errorMessage: String
 })
 
 module.exports = mongoose.model('error', errorSchema)
